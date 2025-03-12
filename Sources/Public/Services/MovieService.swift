@@ -9,6 +9,6 @@ public protocol MovieService {
     /// - Parameter page: The page number for pagination.
     /// - Returns: An array of `Movie` objects.
     /// - Throws: An error if the retrieval fails.
-    func getMovies(by page: Int) async throws -> [Movie]
+    func fetchMovies(by page: Int) async throws -> [Movie]
 
 }

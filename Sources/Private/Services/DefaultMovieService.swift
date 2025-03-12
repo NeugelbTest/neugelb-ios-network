@@ -4,7 +4,7 @@ final class DefaultMovieService {}
 
 extension DefaultMovieService: MovieService {
     
-    func getMovies(by page: Int) async throws -> [Movie] {
+    func fetchMovies(by page: Int) async throws -> [Movie] {
         
         let url = URL(string: TheMovieDBAPI.tv_popular)!
         
@@ -21,7 +21,7 @@ extension DefaultMovieService: MovieService {
             
             throw error
         }
-        
+
     }
 }
 
