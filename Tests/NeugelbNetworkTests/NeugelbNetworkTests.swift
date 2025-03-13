@@ -1,6 +1,17 @@
 import Testing
 @testable import NeugelbNetwork
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+struct NeugelbNetworkTests {
+    
+    @Test
+    func example() async throws {
+        
+        guard let movies: [Movie]? = try await NeugelbNetwork.movieService.fetchMovies(by: 1) else { return }
+        
+        print("Matt: \(movies?.count)")
+        
+        #expect(movies?.count ==  20)
+    }
 }
+
+

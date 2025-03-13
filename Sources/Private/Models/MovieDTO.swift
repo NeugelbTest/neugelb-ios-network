@@ -1,21 +1,23 @@
 import Foundation
 
-struct MovieDTO: Codable {
-    
+struct MovieDTO: Decodable {
     let id: Int
-    let name: String
-    let origin_country: [String]
-    let original_language: String
-    let original_name: String
+    let title: String
     let overview: String
-    let popularity: Double
-    let poster_path: String?
-    let vote_average: Double
-    let vote_count: Int
-    let genre_ids: [Int]
-    let first_air_date: String
-    let backdrop_path: String?
+    let releaseDate: String?
+    let posterPath: String?
+    let language: String?
+    let voteAverage: Double
+    let voteCount: Int?
     
+    enum CodingKeys: String, CodingKey {
+        case id, title, overview
+        case releaseDate = "release_date"
+        case posterPath = "poster_path"
+        case language = "original_language"
+        case voteAverage = "vote_average"
+        case voteCount = "vote_count"
+    }
 }
 
 extension MovieDTO {
