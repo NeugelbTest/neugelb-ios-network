@@ -4,7 +4,7 @@ struct MovieDTO: Codable {
     let id: Int
     let title: String
     let overview: String
-    let releaseDate: String?
+    let releaseDate: String
     let posterPath: String?
     let language: String?
     let voteAverage: Double

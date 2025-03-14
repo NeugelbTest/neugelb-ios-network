@@ -8,7 +8,7 @@ public struct Movie: Hashable, Identifiable {
     public let poster: String?
     public let cover: String?
     public let rating: Double?
-    public let releaseDate: Date?
+    public let releaseDate: Date
     public let language: String?
     public var runtime: Int?
     public var budget: Int?

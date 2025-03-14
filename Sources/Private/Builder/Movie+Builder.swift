@@ -12,7 +12,7 @@ extension Movie {
         private(set) var poster: String?
         private(set) var cover: String?
         private(set) var rating: Double?
-        private(set) var releaseDate: Date?
+        private(set) var releaseDate: Date = Date()
         private(set) var language: String?
         private(set) var runtime: Int?
         private(set) var budget: Int?
@@ -45,12 +45,11 @@ extension Movie.Builder {
         return with(id: movieCompleteDTO.id)
             .with(title: movieCompleteDTO.title)
             .with(overview: movieCompleteDTO.overview)
-            .with(poster: movieCompleteDTO.belongsToCollection?.posterPath)
+            .with(poster: movieCompleteDTO.posterPath)
             .with(cover: movieCompleteDTO.belongsToCollection?.backdropPath)
             .with(rating: movieCompleteDTO.rating)
             .with(releaseDate: movieCompleteDTO.releaseDate)
             .with(language: movieCompleteDTO.originalLanguage)
-            .with(releaseDate: movieCompleteDTO.releaseDate)
             .with(runtime: movieCompleteDTO.runtime)
             .with(budget: movieCompleteDTO.budget)
             .with(revenue: movieCompleteDTO.revenue)
@@ -89,11 +88,11 @@ extension Movie.Builder {
         return self
     }
 
-    func with(releaseDate: String?) -> Self {
-        guard let releaseDate else {
+    func with(releaseDate: String) -> Self {
+        guard let date = Date(serverTime: releaseDate) else {
             return self
         }
-        self.releaseDate = Date(serverTime: releaseDate)
+        self.releaseDate = date
         return self
     }
 
