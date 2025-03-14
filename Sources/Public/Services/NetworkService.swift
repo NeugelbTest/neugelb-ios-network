@@ -11,10 +11,10 @@ protocol NetworkService {
     /// - Throws: An error if the network request fails or decoding fails.
     func fetch<T: Decodable>(endpoint: String, queryItems: [URLQueryItem]?) async throws -> T
     
-    /// Fetches image data from the given URL.
+    /// Fetches image data from the given path.
     ///
-    /// - Parameter url: The full image URL.
+    /// - Parameter path: The  image path.
     /// - Returns: Image data.
     /// - Throws: An error if the network request fails.
-    func fetchImage(from url: String) async throws -> Data
+    func fetchImage(from path: String) async throws -> Data
 }

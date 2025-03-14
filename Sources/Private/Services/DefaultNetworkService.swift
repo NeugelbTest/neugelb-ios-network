@@ -25,8 +25,9 @@ extension DefaultNetworkService: NetworkService {
         return try JSONDecoder().decode(T.self, from: data)
     }
     
-    func fetchImage(from url: String) async throws -> Data {
-        guard let imageURL = URL(string: url) else {
+    func fetchImage(from path: String) async throws -> Data {
+        let urlString = APIConstants.imageBaseURL + path
+        guard let imageURL = URL(string: urlString) else {
             throw URLError(.badURL)
         }
         
