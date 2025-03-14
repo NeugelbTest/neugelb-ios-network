@@ -11,5 +11,3 @@ struct NeugelbNetworkTests {
         #expect(movies?.count ==  20)
     }
 }
-
-
