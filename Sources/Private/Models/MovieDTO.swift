@@ -23,6 +23,8 @@ struct MovieDTO: Codable {
 extension MovieDTO {
 
     func toMovie() -> Movie {
-        return Movie(self)
+        return Movie.Builder()
+            .with(movieDTO: self)
+            .build()
     }
 }
