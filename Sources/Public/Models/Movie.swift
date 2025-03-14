@@ -7,7 +7,7 @@ public struct Movie: Hashable, Identifiable {
     public let overview: String
     public let poster: String?
     public let rating: Double
-    public let date: Date?
+    public let releaseDate: Date?
     public let language: String?
 }
 
@@ -20,7 +20,7 @@ extension Movie {
         overview = movieDTO.overview
         poster = movieDTO.posterPath
         rating = movieDTO.voteAverage
-        date = Date(serverTime: movieDTO.releaseDate)
+        releaseDate = Date(serverTime: movieDTO.releaseDate)
         language = movieDTO.language
     }
 }
