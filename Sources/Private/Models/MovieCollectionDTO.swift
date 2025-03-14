@@ -5,7 +5,7 @@ struct MovieCollectionDTO: Decodable {
     let name: String
     let posterPath: String?
     let backdropPath: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case id, name
         case posterPath = "poster_path"

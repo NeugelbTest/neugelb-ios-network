@@ -30,7 +30,7 @@ extension Movie {
 // MARK: - Public Methods
 
 extension Movie.Builder {
-    
+
     func with(movieDTO: MovieDTO) -> Self {
         return with(id: movieDTO.id)
             .with(title: movieDTO.title)
@@ -40,7 +40,7 @@ extension Movie.Builder {
             .with(releaseDate: movieDTO.releaseDate)
             .with(language: movieDTO.language)
     }
-    
+
     func with(movieCompleteDTO: MovieCompleteDTO) -> Self {
         return with(id: movieCompleteDTO.id)
             .with(title: movieCompleteDTO.title)
@@ -101,37 +101,36 @@ extension Movie.Builder {
         self.language = language
         return self
     }
-    
+
     func with(runtime: Int?) -> Self {
         self.runtime = runtime
         return self
     }
-    
+
     func with(budget: Int?) -> Self {
         self.budget = budget
         return self
     }
-    
+
     func with(revenue: Int?) -> Self {
         self.revenue = revenue
         return self
     }
-    
+
     func with(status: String?) -> Self {
         self.status = status
         return self
     }
-    
+
     func with(adult: Bool?) -> Self {
         self.adult = adult
         return self
     }
-    
+
     func with(genres: [GenreDTO]) -> Self {
         self.genres = genres.map({ $0.toGenre() })
         return self
     }
-    
 
     func build() -> Movie {
         .init(

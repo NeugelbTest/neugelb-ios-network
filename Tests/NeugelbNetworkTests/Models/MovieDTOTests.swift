@@ -3,12 +3,12 @@ import Foundation
 @testable import NeugelbNetwork
 
 struct MovieDTOTests {
-    
+
     typealias dummyMovie = SharedMock.Movie
-    
+
     @Test
     func test_decoding() throws {
-        
+
         let movie = MovieDTO(
             id: dummyMovie.id,
             title: dummyMovie.title,
@@ -19,7 +19,7 @@ struct MovieDTOTests {
             voteAverage: dummyMovie.voteAverage,
             voteCount: dummyMovie.voteCount
         )
-        
+
         let data = try JSONEncoder().encode(movie)
         let movieDTO = try JSONDecoder().decode(MovieDTO.self, from: data)
 

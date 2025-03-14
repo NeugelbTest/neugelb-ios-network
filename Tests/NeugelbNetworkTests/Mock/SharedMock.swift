@@ -7,7 +7,7 @@ enum SharedMock {}
 extension SharedMock {
 
     enum Movie {
-        
+
         static let id = Int.random(in: 1000...9999)
         static let title = "Inception"
         static let overview = "A mind-bending thriller"

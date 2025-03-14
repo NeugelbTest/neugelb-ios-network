@@ -15,7 +15,7 @@ struct MovieCompleteDTO: Decodable {
     let originalLanguage: String?
     let genres: [GenreDTO]
     let belongsToCollection: MovieCollectionDTO?
-    
+
     enum CodingKeys: String, CodingKey {
         case id, title, overview, runtime, budget, revenue, status, adult, genres
         case releaseDate = "release_date"

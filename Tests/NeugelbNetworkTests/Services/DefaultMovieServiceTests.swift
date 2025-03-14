@@ -11,11 +11,11 @@ struct DefaultMovieServiceTests {
         print(movies.first?.id)
         #expect(movies.count ==  20)
     }
-    
+
     @Test
     func test_fetch_movie_success() async throws {
 
-        let movie = try await NeugelbNetwork.movieService.fetchMovieDetails(movieID: 393209)
+        let movie = try await NeugelbNetwork.movieService.fetchMovieDetails(for: 393209)
 
         #expect(movie.id == 393209)
     }
