@@ -8,8 +8,6 @@ struct NeugelbNetworkTests {
         
         guard let movies: [Movie]? = try await NeugelbNetwork.movieService.fetchMovies(by: 1) else { return }
         
-        print("Matt: \(movies?.count)")
-        
         #expect(movies?.count ==  20)
     }
 }

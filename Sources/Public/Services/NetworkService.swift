@@ -1,7 +1,7 @@
 import Foundation
 
 // MARK: - Network Manager
-public protocol NetworkService {
+protocol NetworkService {
     /// Fetches and decodes JSON data from the given API endpoint.
     ///
     /// - Parameters:

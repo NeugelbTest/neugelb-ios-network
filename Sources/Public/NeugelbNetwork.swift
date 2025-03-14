@@ -6,7 +6,7 @@ public enum NeugelbNetwork {
         DefaultMovieService()
     }
     
-    public static var networkService: NetworkService {
-        DefaultNetworkService()
+    public static var imageService: ImageService {
+        DefaultImageService()
     }
 }
