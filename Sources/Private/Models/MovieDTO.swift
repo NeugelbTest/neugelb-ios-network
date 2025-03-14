@@ -4,7 +4,7 @@ struct MovieDTO: Codable {
     let id: Int
     let title: String
     let overview: String
-    let releaseDate: String?
+    let releaseDate: String
     let posterPath: String?
     let language: String?
     let voteAverage: Double
@@ -23,6 +23,8 @@ struct MovieDTO: Codable {
 extension MovieDTO {
 
     func toMovie() -> Movie {
-        return Movie(self)
+        return Movie.Builder()
+            .with(movieDTO: self)
+            .build()
     }
 }
