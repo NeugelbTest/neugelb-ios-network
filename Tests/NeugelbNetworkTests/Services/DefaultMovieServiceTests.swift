@@ -8,6 +8,15 @@ struct DefaultMovieServiceTests {
 
         let movies = try await NeugelbNetwork.movieService.fetchMovies(by: 1)
 
+        print(movies.first?.id)
         #expect(movies.count ==  20)
+    }
+    
+    @Test
+    func test_fetch_movie_success() async throws {
+
+        let movie = try await NeugelbNetwork.movieService.fetchMovieDetails(movieID: 393209)
+
+        #expect(movie.id == 393209)
     }
 }

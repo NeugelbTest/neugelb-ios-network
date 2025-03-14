@@ -3,8 +3,8 @@ import Foundation
 final class DefaultNetworkService {}
 
 extension DefaultNetworkService: NetworkService {
-    func fetch<T: Decodable>(endpoint: String, queryItems: [URLQueryItem]? = nil) async throws -> T {
-        guard var urlComponents = URLComponents(string: "\(APIConstants.baseURL)\(endpoint)") else {
+    func fetch<T: Decodable>(endpoint: APIConstants.Endpoint, queryItems: [URLQueryItem]? = nil) async throws -> T {
+        guard var urlComponents = URLComponents(string: endpoint.path) else {
             throw URLError(.badURL)
         }
 
@@ -15,6 +15,7 @@ extension DefaultNetworkService: NetworkService {
         guard let url = urlComponents.url else {
             throw URLError(.badURL)
         }
+        print("URL: \(url)")
 
         let (data, response) = try await URLSession.shared.data(from: url)
 
