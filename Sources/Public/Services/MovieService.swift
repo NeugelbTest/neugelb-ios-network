@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol MovieService {
-    
+
     // MARK: - Movie Retrieval
 
     /// Fetches the latest available movies from persistent storage.

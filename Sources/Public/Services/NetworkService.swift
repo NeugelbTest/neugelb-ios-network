@@ -10,7 +10,7 @@ protocol NetworkService {
     /// - Returns: A decoded object of type `T`.
     /// - Throws: An error if the network request fails or decoding fails.
     func fetch<T: Decodable>(endpoint: String, queryItems: [URLQueryItem]?) async throws -> T
-    
+
     /// Fetches image data from the given path.
     ///
     /// - Parameter path: The  image path.

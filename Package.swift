@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "NeugelbNetwork",
-            targets: ["NeugelbNetwork"]),
+            targets: ["NeugelbNetwork"])
     ],
     targets: [
         .target(
@@ -20,6 +20,6 @@ let package = Package(
         .testTarget(
             name: "NeugelbNetworkTests",
             dependencies: ["NeugelbNetwork"]
-        ),
+        )
     ]
 )

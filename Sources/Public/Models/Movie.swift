@@ -1,7 +1,7 @@
 import Foundation
 
 public struct Movie: Hashable, Identifiable {
-    
+
     public let id: Int
     public let title: String
     public let overview: String
@@ -12,7 +12,7 @@ public struct Movie: Hashable, Identifiable {
 }
 
 extension Movie {
-    
+
     init(_ movieDTO: MovieDTO) {
 
         id = movieDTO.id

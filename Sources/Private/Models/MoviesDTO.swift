@@ -5,7 +5,7 @@ struct MoviesDTO: Decodable {
     let results: [MovieDTO]
     let totalPages: Int
     let totalResults: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case page, results
         case totalPages = "total_pages"

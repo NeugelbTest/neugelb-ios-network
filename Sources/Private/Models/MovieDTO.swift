@@ -9,7 +9,7 @@ struct MovieDTO: Decodable {
     let language: String?
     let voteAverage: Double
     let voteCount: Int?
-    
+
     enum CodingKeys: String, CodingKey {
         case id, title, overview
         case releaseDate = "release_date"
@@ -21,7 +21,7 @@ struct MovieDTO: Decodable {
 }
 
 extension MovieDTO {
-    
+
     func toMovie() -> Movie {
         return Movie(self)
     }
