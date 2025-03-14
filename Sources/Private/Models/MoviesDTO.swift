@@ -1,6 +1,6 @@
 import Foundation
 
-struct MoviesDTO: Decodable {
+struct MoviesDTO: Codable {
     let page: Int
     let results: [MovieDTO]
     let totalPages: Int

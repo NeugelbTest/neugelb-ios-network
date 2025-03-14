@@ -1,6 +1,6 @@
 import Foundation
 
-struct MovieDTO: Decodable {
+struct MovieDTO: Codable {
     let id: Int
     let title: String
     let overview: String
