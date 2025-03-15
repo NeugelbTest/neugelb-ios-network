@@ -54,7 +54,6 @@ import NeugelbNetwork
 ## Future Improvements
 
 - **CI/CD Enhancements**: Further improve automation by refining build, test, and deployment workflows.
-- **SwiftGen Integration**: Enhance type safety and performance using [SwiftGen](https://github.com/SwiftGen/SwiftGen) to generate type-safe accessors for assets.
 - **More Unit Tests**: Expand test coverage to ensure robust functionality.
 - **Documentation Improvements**: Add detailed API usage examples.
 
