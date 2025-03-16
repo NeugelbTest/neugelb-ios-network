@@ -6,5 +6,3 @@ extension String {
         return locale.localizedString(forLanguageCode: self)
     }
 }
-
-
