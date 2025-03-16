@@ -97,7 +97,7 @@ extension Movie.Builder {
     }
 
     func with(language: String?) -> Self {
-        self.language = language
+        self.language = language?.getLanguageNameFromCode()
         return self
     }
 
