@@ -18,5 +18,6 @@ struct DefaultMovieServiceTests {
         let movie = try await NeugelbNetwork.movieService.fetchMovieDetails(for: 393209)
 
         #expect(movie.id == 393209)
+        #expect(movie.language == "English")
     }
 }
